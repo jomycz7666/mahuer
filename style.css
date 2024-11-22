@@ -307,7 +307,7 @@ header .navbar{
 }   
 
 @media (max-width: 1024px) {
-    section {
+    .menu-section .section-content{
         flex-direction: column;
         align-items: center;
     }
