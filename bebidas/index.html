@@ -1,28 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menú MAHUER</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Menú Mahuer</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
+
 <body>
-  <header class="menu-header">
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar section-content">
+      <a href="#" class="nav-logo">
+        <h2 class="logo-text">Café Mahuer</h2>
+      </a>
+      <ul class="nav-menu">
+        <button id="menu-close-button" class="fas fa-times"></button>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">Acerca de Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a href="#menu" class="nav-link">Menú</a>
+        </li>
+        <li class="nav-item">
+          <a href="#testimonials" class="nav-link">Testimonios</a>
+        </li>
+        <li class="nav-item">
+          <a href="#tea" class="nav-link">Salon del Té</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Visitanos</a>
+        </li>
+      </ul>
+      <button id="menu-open-button" class="fas fa-bars"></button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+
+  <div class="menu-header">
     <div class="logo-container">
-      <img src="/images/LogoMahuer.png" alt="Monalisa Café-Bar" class="logo">
+      <img src="LogoMahuer.png" alt="Logo Cafe Mahuer" class="logo">
     </div>
     <p class="menu-description">
-      En Cafe Cahuer, les ofrecemos un espacio tranquilo donde pueden disfrutar de un delicioso café. 
-      También contamos con una amplia variedad de antojos y platillos saludables, con opciones veganas y vegetarianas.
+      En Cafe Cahuer, les ofrecemos un espacio tranquilo donde pueden disfrutar de un delicioso café.
+      También contamos con una amplia variedad de antojos y platillos saludables, con opciones veganas.
     </p>
     <div class="menu-legends">
-      <p><span class="icon">🌱</span> Vegetariano</p>
+      <p><span class="icon">🌱</span> Vegano</p>
       <p><span class="icon">⭐</span> Recomendación del chef</p>
     </div>
-  </header>
+  </div>
+
+  <!-- Menu Section -->
+
   <main class="menu-main">
-    <h2>BAGELS / CHAPATA</h2>
-    <p class="menu-subtitle">Tipo de pan a su elección. Nuestros sándwiches salados vienen acompañados de ensalada de la casa con aderezo miel mostaza.</p>
+    <h2>CHAPATA</h2>
+    <p class="menu-subtitle">Tipo de pan a su elección. Nuestras Chapatas vienen acompañados de papas fritas.</p>
+    <div class="menu-items">
+      <div class="menu-item">
+        <h3>L’ITALIANO <span>$95</span></h3>
+        <p>Deliciosa combinación de jitomate, queso
+          mozzarella o panela, lechuga y aceite de olivo.</p>
+        <div class="extras">
+          <span>Jamón de pavo ahumado. (+$20)</span>
+          <span>Jamón serrano de cerdo ibérico. (+$35)</span>
+          <span>Pechuga preparada a las finas hierbas. (+$35)</span>
+          <span>Roast Beef (+$25)</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <h3>⭐ SINCARNITA <span>$98</span></h3>
+        <p>Champiñon sellado con epazote y ajo, aderezo
+          de aceituna, germen, lechuga y queso panela.</p>
+        <div class="extras">
+          <span>Jamón de pavo ahumado. (+$20)</span>
+          <span>Jamón serrano de cerdo ibérico. (+$35)</span>
+          <span>Pechuga preparada a las finas hierbas. (+$35)</span>
+          <span>Roast Beef (+$25)</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <h3>RICARNICO<span>$98</span></h3>
+        <p>Roast Beef o pechuga de pavo, jitomate,
+          cebolla morada, germen, pepino aguacate
+          y aderezo de albahaca.</p>
+        <div class="extras">
+          <span>Jamón de pavo ahumado. (+$20)</span>
+          <span>Jamón serrano de cerdo ibérico. (+$35)</span>
+          <span>Pechuga preparada a las finas hierbas. (+$35)</span>
+          <span>Roast Beef (+$25)</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <h3>MARIACHI <span>$85</span></h3>
+        <p>Al estilo Jalisco, frijol bayo, elote tierno
+          desgranado, chile cuaresmeño frito y
+          queso manchego gratinado.</p>
+        <div class="extras">
+          <span>Jamón de pavo ahumado. (+$20)</span>
+          <span>Jamón serrano de cerdo ibérico. (+$35)</span>
+          <span>Pechuga preparada a las finas hierbas. (+$35)</span>
+          <span>Roast Beef (+$25)</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <h3>QUATTRO FORMAGGI <span>$98</span></h3>
+        <p>Mezcla de cuatro quesos, (mozzarella,
+          manchego, cheddar, queso crema) pepino,
+          espinaca y aderezo de albahaca.</p>
+        <div class="extras">
+          <span>Jamón de pavo ahumado. (+$20)</span>
+          <span>Jamón serrano de cerdo ibérico. (+$35)</span>
+          <span>Pechuga preparada a las finas hierbas. (+$35)</span>
+          <span>Roast Beef (+$25)</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <h3>LA MAGIC <span>$98</span></h3>
+        <p>Lechuga, germen, arándano, mayonesa
+          a las finas hierbas, pechuga de pavo o
+          roast beef.</p>
+        <div class="extras">
+          <span>Jamón de pavo ahumado. (+$20)</span>
+          <span>Jamón serrano de cerdo ibérico. (+$35)</span>
+          <span>Pechuga preparada a las finas hierbas. (+$35)</span>
+          <span>Roast Beef (+$25)</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <h3>DE TEMPORADA <span>$115</span></h3>
+        <p>Pregunta por la especial de
+          temporada.</p>
+        <div class="extras">
+          <span>Jamón de pavo ahumado. (+$20)</span>
+          <span>Jamón serrano de cerdo ibérico. (+$35)</span>
+          <span>Pechuga preparada a las finas hierbas. (+$35)</span>
+          <span>Roast Beef (+$25)</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <main class="menu-wraps">
+    <h2>Wrap</h2>
+    <p class="menu-subtitle">Tipo de pan a su elección. Nuestros sándwiches salados vienen acompañados de ensalada de la
+      casa con aderezo miel mostaza.</p>
     <div class="menu-items">
       <div class="menu-item">
         <h3>Clásico <span>$50</span></h3>
@@ -59,5 +191,8 @@
       </div>
     </div>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
