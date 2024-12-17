@@ -1,100 +1,284 @@
 /* styles.css */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f5f0;  
-    color: #3a3a3a;
-  }
-  
-  .menu-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #f7e9d7;
-  }
-  
-  .logo {
-    width: 100px;
-    margin-bottom: 10px;
-  }
-  
-  .menu-description {
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 10px 0;
-  }
-  
-  .menu-legends {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-  
-  .menu-legends p {
-    margin: 5px 0;
-  }
-  
-  .icon {
-    font-weight: bold;
-  }
-  
-  .menu-main {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .menu-main h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .menu-subtitle {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  background-color: #f9f5f0;
+  color: #3a3a3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  /* Colors */
+  --white-color: #fff;
+  --dark-color: #252525;
+  --primary-color: #eed6c4;
+  --secondary-color: #507853;
+  --light-pink-color: #faf4f5;
+  --medium-gray-color: #ccc;
+  --coffee-color: #914e4c;
+  --dark-coffee-color: #785350;
+  --dark-green-color: #264b2a;
+  --light-green-color: #c7f1c8;
+
+
+  /* Font Size */
+  --font-size-s: 0.9rem;
+  --font-size-n: 1rem;
+  --font-size-m: 1.12rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.3rem;
+
+  /* Font Weight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Border Radius */
+  --border-radius-s: 8px;
+  --border-radius-m: 30px;
+  --border-radius-circle: 50%;
+
+  /* Site max widht */
+  --site-max-width: 1300px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/*Navbar styling*/
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background: var(--primary-color);
+}
+
+header .navbar {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .nav-logo .logo-text {
+  color: var(--coffee-color);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.navbar .nav-menu {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+  padding: 10px 18px;
+  color: var(--coffee-color);
+  font-size: var(--font-size-m);
+  border-radius: var(--border-radius-m);
+  transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+.navbar #menu-close-button,
+#menu-open-button {
+  display: none;
+}
+
+.fa-close:before,
+.fa-multiply:before,
+.fa-remove:before,
+.fa-times:before,
+.fa-xmark:before {
+  color: var(--coffee-color);
+}
+
+/*Hero Section*/
+
+.menu-header {
+  text-align: center;
+  padding: 80px 20px 20px 20px;
+  background-color: var(--primary-color);
+}
+
+.logo {
+  width: 450px;
+  margin-bottom: 10px;
+}
+
+.menu-description {
+  font-size: var(--font-size-m);
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+.menu-legends {
+  font-size: 14px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-legends p {
+  margin: 5px 0;
+}
+
+.icon {
+  font-weight: bold;
+}
+
+.menu-main {
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-main h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.menu-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h3 {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.menu-item p {
+  font-size: 14px;
+  color: #555;
+}
+
+.extras {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+}
+
+.menu-wraps h2 {
+  margin-top: 50px;
+}
+
+.menu-wraps {
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
   .menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .menu-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 300px;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
   }
-  
-  .menu-item h3 {
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
+}
+
+/* Responside media query code for max width 900px */
+@media screen and (max-width: 900px) {
+  :root {
+    --font-size-m: 1rem;
+    --font-size-l: 1.3rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 1.8rem;
+  }
+
+  .logo {
+    width: 270px;
     margin-bottom: 10px;
   }
-  
-  .menu-item p {
-    font-size: 14px;
-    color: #555;
+
+  body.show-mobile-menu header::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
   }
-  
-  .extras {
-    margin-top: 10px;
-    font-size: 12px;
-    color: #999;
+
+  .navbar #menu-close-button,
+  #menu-open-button {
+    display: block;
+    font-size: var(--font-size-l);
   }
-  
-  @media (max-width: 768px) {
-    .menu-items {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .menu-item {
-      width: 90%;
-    }
+
+  .navbar #menu-close-button {
+    position: absolute;
+    right: 30px;
+    top: 30px;
   }
-  
+
+  .navbar #menu-open-button {
+    color: var(--coffee-color);
+  }
+
+  .navbar .nav-menu {
+    display: block;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    background: var(--light-pink-color);
+    transition: left 0.3s ease;
+  }
+
+  body.show-mobile-menu .navbar .nav-menu {
+    left: 0;
+  }
+
+  .navbar .nav-menu .nav-link {
+    color: var(--coffee-color);
+    display: block;
+    margin-top: 17px;
+    font-size: var(--font-size-l);
+  }
+}
